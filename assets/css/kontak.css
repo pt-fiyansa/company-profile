@@ -1,0 +1,224 @@
+/* ==========================================================================
+   Halaman Kontak — styles khusus (dipakai bersama assets/css/style.css)
+   ========================================================================== */
+
+/* ---------- Page banner ---------- */
+.kontak-banner {
+  background: linear-gradient(120deg, var(--navy-900), var(--navy-700));
+  color: #fff;
+  padding-top: clamp(7.5rem, 13vw, 9.5rem);
+  padding-bottom: clamp(3rem, 6vw, 4rem);
+  text-align: center;
+}
+.kontak-banner__content h1 {
+  font-weight: 800;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.kontak-banner__content p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 560px;
+  margin-inline: auto;
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+}
+
+/* ---------- Form panel ---------- */
+.contact-form-panel {
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: var(--shadow-soft);
+}
+.contact-form-panel .form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 0.35rem;
+}
+.fm-input {
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+}
+.fm-input:focus {
+  border-color: var(--green-600);
+  box-shadow: 0 0 0 0.2rem rgba(22, 163, 74, 0.15);
+}
+.contact-form-panel button[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
+
+/* ---------- Map panel ---------- */
+.contact-map-panel {
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+}
+.contact-map-frame {
+  border: 0;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 260px;
+  display: block;
+  filter: grayscale(15%);
+}
+.contact-map-panel__footer {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border-soft);
+}
+.contact-map-panel__footer h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.3rem;
+}
+.contact-map-panel__footer p {
+  font-size: 0.87rem;
+  color: var(--text-body);
+}
+
+/* ---------- Reveal-on-scroll: fail-safe (sama seperti layanan.css) ---------- */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+.js-ready .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+.js-ready .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===================================
+   MEGA MENU (sama seperti assets/css/layanan.css)
+=================================== */
+
+/* ===================================
+   MEGA MENU
+=================================== */
+
+.navbar-fm {
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: saturate(180%) blur(6px);
+  padding-block: 0.85rem;
+  transition:
+    box-shadow 0.25s ease,
+    padding-block 0.25s ease;
+  border-bottom: 1px solid transparent;
+
+  overflow: visible;
+}
+
+.mega-dropdown {
+  position: static;
+}
+
+.mega-menu {
+  display: none;
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  top: calc(100% + 1px);
+
+  width: 100%;
+
+  padding: 40px 50px;
+
+  background: #fff;
+
+  border: 0;
+
+  border-radius: 0;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+  z-index: 9999;
+}
+
+@media (min-width: 992px) {
+  .mega-dropdown:hover > .mega-menu {
+    display: block;
+    animation: fadeDown 0.25s ease;
+  }
+}
+
+.menu-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.menu-title i {
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+
+  background: #eef4ff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #0d5db8;
+
+  font-size: 28px;
+}
+
+.menu-title h5 {
+  margin: 0;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: #0d3d86;
+}
+
+.mega-menu a {
+  display: block;
+
+  padding: 10px 0;
+
+  text-decoration: none;
+
+  color: #666;
+
+  transition: 0.25s;
+}
+
+.mega-menu a:hover {
+  color: #0d5db8;
+
+  padding-left: 8px;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

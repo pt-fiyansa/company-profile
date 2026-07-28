@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Layanan Kami — PT. Fiyansa Mulya</title>
+    <meta name="description" content="Layanan PT. Fiyansa Mulya: Cleaning Service, Sales & Marketing, Front Office, Driver, dan Office Boy/Girl untuk perusahaan swasta dan instansi pemerintah." />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://placehold.co" crossorigin />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" crossorigin="anonymous" />
+
+    <!-- Site styles (shared) + Layanan page styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/layanan.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Fallback kritikal: kalau layanan.css gagal ke-load, banner tetap layak tampil -->
+    <style>
+      .layanan-banner {
+        background: linear-gradient(120deg, #081a3d, #123072);
+        color: #fff;
+        padding-top: clamp(7.5rem, 13vw, 9.5rem);
+        padding-bottom: clamp(3rem, 6vw, 4rem);
+        text-align: center;
+      }
+      .layanan-banner__content h1 {
+        font-weight: 800;
+        font-size: clamp(1.9rem, 4vw, 2.6rem);
+        margin-bottom: 0.5rem;
+      }
+      .layanan-banner__content p {
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 560px;
+        margin-inline: auto;
+      }
+    </style>
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#layananSpy" data-bs-offset="120" tabindex="0">
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar navbar-expand-lg navbar-fm fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html#beranda">PT. FIYANSA <span>MULYA</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Buka menu navigasi">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0" id="layananSpy">
+            <li class="nav-item"><a class="nav-link" href="index.html#beranda">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#tentang">Tentang Kami</a></li>
+
+            <li class="nav-item dropdown mega-dropdown">
+              <a class="nav-link dropdown-toggle active" href="layanan.html" id="layananDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Layanan </a>
+
+              <div class="dropdown-menu mega-menu" aria-labelledby="layananDropdown">
+                <div class="container">
+                  <div class="row gy-4">
+                    <div class="col-lg-4">
+                      <div class="menu-title">
+                        <i class="bi bi-brush"></i>
+                        <h5>Cleaning Service</h5>
+                      </div>
+
+                      <a href="#layanan-cleaning">Daily Cleaning</a>
+                      <a href="#layanan-cleaning">General Cleaning</a>
+                      <a href="#layanan-cleaning">Glass & Window Cleaning</a>
+                      <a href="#layanan-cleaning">Swimming Pool Maintenance</a>
+                      <a href="#layanan-cleaning">Gardening & Landscaping</a>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="menu-title">
+                        <i class="bi bi-briefcase"></i>
+                        <h5>Tenaga Profesional</h5>
+                      </div>
+
+                      <a href="#layanan-sales">Sales & Marketing</a>
+                      <a href="#layanan-fo">Front Office</a>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="menu-title">
+                        <i class="bi bi-truck"></i>
+                        <h5>Operasional</h5>
+                      </div>
+
+                      <a href="#layanan-driver">Driver</a>
+                      <a href="#layanan-obg">Office Boy / Girl</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- <li class="nav-item"><a class="nav-link" href="index.html#mitra">Mitra</a></li> -->
+            <!-- <li class="nav-item"><a class="nav-link" href="index.html#portofolio">Portofolio</a></li> -->
+            <!-- <li class="nav-item"><a class="nav-link" href="index.html#legalitas">Legalitas</a></li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="kontak.html">Kontak</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center gap-3">
+            <a href="tel:081232331053" class="navbar-phone d-none d-md-inline-flex align-items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              081232331053
+            </a>
+            <a href="index.html#kontak" class="btn btn-fm-primary btn-sm">Minta Penawaran</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ============ PAGE BANNER ============ -->
+    <header class="layanan-banner">
+      <div class="container layanan-banner__content">
+        <span class="eyebrow eyebrow-light mb-3">Layanan Kami</span>
+        <h1 class="mb-2">Layanan Kami</h1>
+        <p class="mb-0">Solusi tenaga kerja profesional yang fully-managed untuk mendukung berbagai kebutuhan operasional bisnis Anda.</p>
+      </div>
+    </header>
+
+    <!-- ============ CLEANING SERVICE ============ -->
+    <section class="section-padding" id="layanan-cleaning">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 reveal" style="max-width: 640px">
+          <span class="eyebrow eyebrow-green mb-3">Facility Services</span>
+          <h2 class="section-title" style="font-size: clamp(1.6rem, 3vw, 2.1rem)">Layanan Kebersihan &amp; Perawatan Fasilitas</h2>
+          <p class="mt-2 mb-0">Cuplikan tim kami saat bertugas di lapangan, memastikan setiap layanan terlaksana sesuai standar.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="service-photo-card h-100">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1663011218145-c1d0c3ba3542?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width="700"
+                height="525"
+                loading="lazy"
+                decoding="async"
+                alt="Foto dummy — Glass & Windows Cleaning"
+              />
+              <div class="service-photo-card__body">
+                <h3>Glass &amp; Windows Cleaning</h3>
+                <p>Kaca bening dan bebas noda untuk kesan gedung yang modern, bersih, dan terawat secara profesional.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="service-photo-card h-100">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1683141112334-d7d404f6e716?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width="700"
+                height="525"
+                loading="lazy"
+                decoding="async"
+                alt="Foto dummy — Daily Cleaning"
+              />
+              <div class="service-photo-card__body">
+                <h3>Daily Cleaning</h3>
+                <p>Kebersihan harian yang terjaga secara konsisten untuk lingkungan kerja yang sehat dan nyaman.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="service-photo-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1740657254989-42fe9c3b8cce?q=80&w=1012&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width="700"
+                height="525"
+                loading="lazy"
+                decoding="async"
+                alt="Foto dummy — Swimming Pool Maintenance"
+              />
+              <div class="service-photo-card__body">
+                <h3>Swimming Pool Maintenance</h3>
+                <p>Perawatan kolam renang menyeluruh untuk menjaga kejernihan air dan standar higienitas fasilitas Anda.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="service-photo-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1669101602124-f5b78895d91c?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width="700"
+                height="525"
+                loading="lazy"
+                decoding="async"
+                alt="Foto dummy — General Cleaning"
+              />
+              <div class="service-photo-card__body">
+                <h3>General Cleaning</h3>
+                <p>Pembersihan total berkala untuk area yang sulit dijangkau, memastikan setiap sudut fasilitas tetap higienis.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="service-photo-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1668189777890-495c36095340?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                width="700"
+                height="525"
+                loading="lazy"
+                decoding="async"
+                alt="Foto dummy — Gardening & Landscaping"
+              />
+              <div class="service-photo-card__body">
+                <h3>Gardening &amp; Landscaping</h3>
+                <p>Perawatan taman dan lanskap hijau untuk menciptakan ekosistem bisnis yang asri dan representatif.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SALES & MARKETING ============ -->
+    <section class="section-padding bg-soft" id="layanan-sales">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 reveal" style="max-width: 640px">
+          <span class="eyebrow eyebrow-green mb-3">Sales Force</span>
+          <h2 class="section-title" style="font-size: clamp(1.6rem, 3vw, 2.1rem)">Sales &amp; Marketing</h2>
+          <p class="mt-2 mb-0">Tim sales terlatih untuk mendukung penjualan dan aktivasi brand di lapangan.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 reveal">
+            <div class="service-photo-card h-100">
+              <img src="https://placehold.co/700x525/123072/eef1f8?font=roboto&text=Brand+Ambassador+(BA)" width="700" height="525" loading="lazy" decoding="async" alt="Foto dummy — Brand Ambassador (BA)" />
+              <div class="service-photo-card__body">
+                <h3>Brand Ambassador (BA)</h3>
+                <p>Perwakilan brand yang komunikatif dan representatif untuk memperkenalkan produk langsung ke konsumen.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="service-photo-card h-100">
+              <img src="https://placehold.co/700x525/16a34a/e7f7ed?font=roboto&text=Sales+Event" width="700" height="525" loading="lazy" decoding="async" alt="Foto dummy — Sales Event" />
+              <div class="service-photo-card__body">
+                <h3>Sales Event</h3>
+                <p>Tim penjualan khusus untuk kebutuhan event, aktivasi produk, dan program promosi berkala.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FRONT OFFICE ============ -->
+    <section class="section-padding" id="layanan-fo">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 reveal" style="max-width: 640px">
+          <span class="eyebrow eyebrow-green mb-3">Tenaga Operasional</span>
+          <h2 class="section-title" style="font-size: clamp(1.6rem, 3vw, 2.1rem)">Front Office</h2>
+          <p class="mt-2 mb-0">Resepsionis profesional sebagai wajah pertama perusahaan Anda.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 reveal">
+            <div class="service-photo-card h-100">
+              <img src="https://placehold.co/700x525/0c2154/eef1f8?font=roboto&text=Reception+%26+Guest+Handling" width="700" height="525" loading="lazy" decoding="async" alt="Foto dummy — Reception & Guest Handling" />
+              <div class="service-photo-card__body">
+                <h3>Reception &amp; Guest Handling</h3>
+                <p>Menyambut tamu dan klien dengan sikap ramah dan profesional sejak langkah pertama mereka masuk kantor.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="service-photo-card h-100">
+              <img src="https://placehold.co/700x525/123072/eef1f8?font=roboto&text=Front+Desk+Service" width="700" height="525" loading="lazy" decoding="async" alt="Foto dummy — Front Desk Service" />
+              <div class="service-photo-card__body">
+                <h3>Front Desk Service</h3>
+                <p>Mengelola panggilan, jadwal tamu, dan administrasi harian meja depan dengan rapi dan terorganisir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DRIVER ============ -->
+    <section class="section-padding bg-soft" id="layanan-driver">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 reveal" style="max-width: 640px">
+          <span class="eyebrow eyebrow-green mb-3">Tenaga Operasional</span>
+          <h2 class="section-title" style="font-size: clamp(1.6rem, 3vw, 2.1rem)">Driver</h2>
+          <p class="mt-2 mb-0">Pengemudi berpengalaman dengan standar keselamatan dan kedisiplinan tinggi.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 reveal">
+            <div class="service-photo-card h-100">
+              <img src="https://placehold.co/700x525/081a3d/eef1f8?font=roboto&text=Operational+Driver" width="700" height="525" loading="lazy" decoding="async" alt="Foto dummy — Operational Driver" />
+              <div class="service-photo-card__body">
+                <h3>Operational Driver</h3>
+                <p>Mendukung mobilitas operasional harian perusahaan dengan armada dan rute yang efisien.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="service-photo-card h-100">
+              <img src="https://placehold.co/700x525/128a3e/e7f7ed?font=roboto&text=Executive+Driver" width="700" height="525" loading="lazy" decoding="async" alt="Foto dummy — Executive Driver" />
+              <div class="service-photo-card__body">
+                <h3>Executive Driver</h3>
+                <p>Layanan antar-jemput untuk jajaran eksekutif dengan standar etika dan kerapian berkendara tinggi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ OFFICE BOY/GIRL ============ -->
+    <section class="section-padding" id="layanan-obg">
+      <div class="container">
+        <div class="text-center mx-auto mb-5 reveal" style="max-width: 640px">
+          <span class="eyebrow eyebrow-green mb-3">Tenaga Operasional</span>
+          <h2 class="section-title" style="font-size: clamp(1.6rem, 3vw, 2.1rem)">Office Boy/Girl</h2>
+          <p class="mt-2 mb-0">Dukungan operasional harian kantor yang andal dan cekatan.</p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 reveal">
+            <div class="service-photo-card h-100">
+              <img src="https://placehold.co/700x525/123072/eef1f8?font=roboto&text=Office+Support" width="700" height="525" loading="lazy" decoding="async" alt="Foto dummy — Office Support" />
+              <div class="service-photo-card__body">
+                <h3>Office Support</h3>
+                <p>Membantu kebutuhan administratif dan logistik ringan agar operasional kantor berjalan lancar.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 reveal">
+            <div class="service-photo-card h-100">
+              <img src="https://placehold.co/700x525/16a34a/e7f7ed?font=roboto&text=Pantry+%26+Facility+Care" width="700" height="525" loading="lazy" decoding="async" alt="Foto dummy — Pantry & Facility Care" />
+              <div class="service-photo-card__body">
+                <h3>Pantry &amp; Facility Care</h3>
+                <p>Menjaga kerapian pantry dan fasilitas kantor agar selalu nyaman digunakan sehari-hari.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section-padding cta-section">
+      <div class="container reveal">
+        <h2 class="mb-3">Butuh layanan khusus untuk perusahaan Anda?</h2>
+        <p class="mb-4">Konsultasikan kebutuhan tenaga kerja atau facility service Anda dengan tim ahli kami.</p>
+        <a href="index.html#kontak" class="btn-fm-navy d-inline-flex align-items-center">Minta Penawaran</a>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer-fm pt-5">
+      <div class="container">
+        <div class="row g-4 pb-4">
+          <div class="col-lg-4">
+            <div class="footer-brand mb-3">PT. FIYANSA MULYA</div>
+            <p class="mb-3" style="font-size: 0.9rem">Mitra penyedia jasa tenaga kerja profesional dan layanan fasilitas terpadu yang terpercaya sejak 2012.</p>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h5>Tautan</h5>
+            <div class="d-flex flex-column">
+              <a href="index.html#beranda">Beranda</a>
+              <a href="index.html#tentang">Tentang Kami</a>
+              <a href="layanan.html">Layanan</a>
+              <a href="index.html#portofolio">Portofolio</a>
+              <a href="index.html#legalitas">Legalitas</a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h5>Layanan Kami</h5>
+            <div class="d-flex flex-column">
+              <a href="#layanan-cleaning">Cleaning Service</a>
+              <a href="#layanan-sales">Sales &amp; Marketing</a>
+              <a href="#layanan-fo">Front Office</a>
+              <a href="#layanan-driver">Driver</a>
+              <a href="#layanan-obg">Office Boy/Girl</a>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <h5>Kontak</h5>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>Graha Fiyansa, Jl. Contoh Alamat No. 123, Surabaya, Jawa Timur</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"
+                />
+              </svg>
+              <a href="tel:081232331053" class="mb-0">081232331053</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 6-10 7L2 6" />
+              </svg>
+              <a href="mailto:info@fiyansamulya.co.id" class="mb-0">info@fiyansamulya.co.id</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom text-center text-md-start d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+          <span>&copy; <span id="currentYear">2026</span> PT. Fiyansa Mulya. Seluruh Hak Cipta Dilindungi.</span>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" type="button" aria-label="Kembali ke atas">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="12" y1="19" x2="12" y2="5" />
+        <polyline points="5 12 12 5 19 12" />
+      </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+    <script src="assets/js/layanan.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,244 @@
+/* ==========================================================================
+   Halaman Layanan — styles khusus (dipakai bersama assets/css/style.css)
+   ========================================================================== */
+
+/* ---------- Page banner (pengganti hero besar di halaman ini) ---------- */
+.layanan-banner {
+  background: linear-gradient(120deg, var(--navy-900), var(--navy-700));
+  color: #fff;
+  padding-top: clamp(7.5rem, 13vw, 9.5rem);
+  padding-bottom: clamp(3rem, 6vw, 4rem);
+  text-align: center;
+}
+.layanan-banner__content h1 {
+  font-weight: 800;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.layanan-banner__content p {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 560px;
+  margin-inline: auto;
+  font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+}
+
+/* ---------- Icon card grid (Sales Force / Tenaga Operasional) ---------- */
+.icon-card-grid {
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.25rem;
+  height: 100%;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.icon-card-grid:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(10, 26, 61, 0.12);
+}
+.icon-card-grid .icon-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-050);
+  color: var(--green-700);
+  margin-bottom: 0.9rem;
+}
+.icon-card-grid h3 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.4rem;
+}
+.icon-card-grid p {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+/* ---------- Kartu galeri terang per kategori (foto di atas, teks di bawah) ---------- */
+.service-photo-card {
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.service-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px rgba(10, 26, 61, 0.12);
+}
+.service-photo-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+.service-photo-card__body {
+  padding: 1.25rem 1.35rem 1.5rem;
+}
+.service-photo-card__body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+.service-photo-card__body p {
+  font-size: 0.88rem;
+  color: var(--text-body);
+  margin-bottom: 0;
+}
+
+/* Active state highlight for the currently-viewed Layanan submenu item
+   (toggled by layanan.js while scrolling) */
+.navbar-fm .dropdown-item.is-active {
+  background: var(--green-050);
+  color: var(--green-700);
+}
+
+/* ---------- Reveal-on-scroll: fail-safe ----------
+   PENTING: konten .reveal defaultnya SELALU tampil (opacity: 1).
+   Animasi fade-up baru aktif kalau <html> punya class "js-ready",
+   yang hanya ditambahkan oleh JS setelah terbukti berhasil jalan.
+   Jadi kalau layanan.js gagal load (404 / diblokir ERP), section
+   TIDAK ikut hilang — beda dari versi sebelumnya yang defaultnya
+   opacity:0 lalu menunggu JS untuk memunculkannya. */
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+.js-ready .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+.js-ready .reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ===================================
+   MEGA MENU
+=================================== */
+
+.navbar-fm {
+  overflow: visible;
+}
+
+.mega-dropdown {
+  position: static;
+}
+
+.mega-menu {
+  display: none;
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  top: 100%;
+
+  width: 100%;
+
+  background: #fff;
+
+  padding: 40px 50px;
+
+  border: none;
+
+  border-radius: 0;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+
+  z-index: 9999;
+}
+
+@media (min-width: 992px) {
+  .mega-dropdown:hover > .mega-menu {
+    display: block;
+    animation: megaFade 0.25s ease;
+  }
+}
+
+.menu-title {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.menu-title i {
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 50%;
+
+  background: #eef4ff;
+
+  color: #0b5ed7;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  font-size: 26px;
+}
+
+.menu-title h5 {
+  margin: 0;
+
+  color: #0c2154;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+.mega-menu a {
+  display: block;
+
+  color: #555;
+
+  text-decoration: none;
+
+  padding: 9px 0;
+
+  transition: 0.25s;
+}
+
+.mega-menu a:hover {
+  color: #16a34a;
+
+  padding-left: 8px;
+}
+
+@keyframes megaFade {
+  from {
+    opacity: 0;
+
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
