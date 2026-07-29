@@ -1,5 +1,9 @@
 /* ==========================================================================
-   Halaman Layanan — styles khusus (dipakai bersama assets/css/style.css)
+   Halaman Layanan — styles KHUSUS halaman ini saja.
+   Dipakai BERSAMA style.css (yang di-load lebih dulu di <head>).
+   Navbar, mega-menu, tombol (.btn-fm-*), footer, back-to-top — SEMUA itu
+   sudah ada di style.css. JANGAN duplikat lagi di sini, supaya cuma ada
+   1 sumber kebenaran untuk hal-hal yang dipakai bersama semua halaman.
    ========================================================================== */
 
 /* ---------- Page banner (pengganti hero besar di halaman ini) ---------- */
@@ -23,7 +27,7 @@
   font-size: clamp(0.95rem, 1.4vw, 1.05rem);
 }
 
-/* ---------- Icon card grid (Sales Force / Tenaga Operasional) ---------- */
+/* ---------- Icon card grid (dipakai kalau ada layout icon-only) ---------- */
 .icon-card-grid {
   background: #fff;
   border: 1px solid var(--border-soft);
