@@ -192,7 +192,7 @@ a {
 }
 
 @media (min-width: 992px) {
-  .mega-dropdown:hover > .mega-menu {
+  .mega-dropdown:hover .mega-menu {
     display: block;
     animation: fadeDown 0.25s ease;
   }

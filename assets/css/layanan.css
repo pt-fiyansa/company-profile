@@ -1,5 +1,9 @@
 /* ==========================================================================
-   Halaman Layanan — styles khusus (dipakai bersama assets/css/style.css)
+   Halaman Layanan — styles KHUSUS halaman ini saja.
+   Dipakai BERSAMA style.css (yang di-load lebih dulu di <head>).
+   Navbar, mega-menu, tombol (.btn-fm-*), footer, back-to-top — SEMUA itu
+   sudah ada di style.css. JANGAN duplikat lagi di sini, supaya cuma ada
+   1 sumber kebenaran untuk hal-hal yang dipakai bersama semua halaman.
    ========================================================================== */
 
 /* ---------- Page banner (pengganti hero besar di halaman ini) ---------- */
@@ -23,7 +27,7 @@
   font-size: clamp(0.95rem, 1.4vw, 1.05rem);
 }
 
-/* ---------- Icon card grid (Sales Force / Tenaga Operasional) ---------- */
+/* ---------- Icon card grid (dipakai kalau ada layout icon-only) ---------- */
 .icon-card-grid {
   background: #fff;
   border: 1px solid var(--border-soft);
@@ -96,149 +100,4 @@
   font-size: 0.88rem;
   color: var(--text-body);
   margin-bottom: 0;
-}
-
-/* Active state highlight for the currently-viewed Layanan submenu item
-   (toggled by layanan.js while scrolling) */
-.navbar-fm .dropdown-item.is-active {
-  background: var(--green-050);
-  color: var(--green-700);
-}
-
-/* ---------- Reveal-on-scroll: fail-safe ----------
-   PENTING: konten .reveal defaultnya SELALU tampil (opacity: 1).
-   Animasi fade-up baru aktif kalau <html> punya class "js-ready",
-   yang hanya ditambahkan oleh JS setelah terbukti berhasil jalan.
-   Jadi kalau layanan.js gagal load (404 / diblokir ERP), section
-   TIDAK ikut hilang — beda dari versi sebelumnya yang defaultnya
-   opacity:0 lalu menunggu JS untuk memunculkannya. */
-.reveal {
-  opacity: 1;
-  transform: none;
-}
-.js-ready .reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition:
-    opacity 0.5s ease,
-    transform 0.5s ease;
-}
-.js-ready .reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* ===================================
-   MEGA MENU
-=================================== */
-
-.navbar-fm {
-  overflow: visible;
-}
-
-.mega-dropdown {
-  position: static;
-}
-
-.mega-menu {
-  display: none;
-
-  position: absolute;
-
-  left: 0;
-  right: 0;
-
-  top: 100%;
-
-  width: 100%;
-
-  background: #fff;
-
-  padding: 40px 50px;
-
-  border: none;
-
-  border-radius: 0;
-
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-
-  z-index: 9999;
-}
-
-@media (min-width: 992px) {
-  .mega-dropdown:hover > .mega-menu {
-    display: block;
-    animation: megaFade 0.25s ease;
-  }
-}
-
-.menu-title {
-  display: flex;
-
-  align-items: center;
-
-  gap: 15px;
-
-  margin-bottom: 25px;
-}
-
-.menu-title i {
-  width: 60px;
-
-  height: 60px;
-
-  border-radius: 50%;
-
-  background: #eef4ff;
-
-  color: #0b5ed7;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  font-size: 26px;
-}
-
-.menu-title h5 {
-  margin: 0;
-
-  color: #0c2154;
-
-  font-size: 22px;
-
-  font-weight: 700;
-}
-
-.mega-menu a {
-  display: block;
-
-  color: #555;
-
-  text-decoration: none;
-
-  padding: 9px 0;
-
-  transition: 0.25s;
-}
-
-.mega-menu a:hover {
-  color: #16a34a;
-
-  padding-left: 8px;
-}
-
-@keyframes megaFade {
-  from {
-    opacity: 0;
-
-    transform: translateY(15px);
-  }
-
-  to {
-    opacity: 1;
-
-    transform: translateY(0);
-  }
 }
