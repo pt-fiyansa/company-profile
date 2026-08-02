@@ -146,6 +146,38 @@ a {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
   color: var(--navy-800);
 }
+/* Navbar Logo */
+/* =========================
+   NAVBAR LOGO
+========================= */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+
+  color: #047650;
+  font-weight: 800;
+}
+
+.navbar-logo {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  /* border-radius: 50%; */
+  margin-right: 15px;
+}
+
+.navbar-brand span {
+  color: inherit;
+  font-weight: inherit;
+}
+
+.navbar-brand > span > span {
+  color: #047650;
+  font-weight: 800;
+}
 
 /* ==========================
    MEGA MENU
@@ -278,13 +310,13 @@ a {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0.28;
+  opacity: 1; /* foto full, biar warna birunya yang atur transparansi */
 }
 .hero__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(115deg, rgba(6, 18, 46, 0.96) 25%, rgba(10, 33, 84, 0.88) 60%, rgba(12, 41, 100, 0.55) 100%);
+  background: rgba(8, 26, 61, 0.65); /* navy solid, transparansi 65% */
 }
 .hero__content {
   position: relative;
@@ -298,31 +330,30 @@ a {
   font-size: clamp(2rem, 4.6vw, 3.1rem);
   line-height: 1.15;
   letter-spacing: -0.02em;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35); /* bantu keterbacaan di atas foto terang */
 }
 .hero p.lead {
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.9);
   font-size: clamp(1rem, 1.6vw, 1.12rem);
   max-width: 640px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
 }
 .hero-certs {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.85rem;
 }
 .hero-certs strong {
-  color: rgba(255, 255, 255, 0.92);
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 700;
   margin-right: 0.35rem;
 }
 .hero-certs .cert-item {
   font-weight: 700;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
   margin-right: 1.1rem;
   white-space: nowrap;
 }
 
-/* Reserve empty space below the hero copy so the stats bar's negative
-   margin (desktop/tablet) pulls into blank area instead of the CTA
-   buttons / certification row above it. */
 @media (min-width: 768px) {
   .hero__content {
     padding-bottom: clamp(5rem, 8vw, 7.5rem);
@@ -471,37 +502,242 @@ a {
 
 /* ---------- Mitra / Klien (partner logo grid) ---------- */
 .partner-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  min-height: 90px;
   background: #fff;
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius-md);
-  padding: 1rem;
-  filter: grayscale(100%);
-  opacity: 0.65;
-  transition:
-    filter 0.25s ease,
-    opacity 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  border-radius: 18px;
+  height: 150px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  border: 1px solid #eef2f7;
+  transition: 0.3s;
 }
+
 .partner-logo:hover {
-  filter: grayscale(0%);
-  opacity: 1;
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-soft);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
 }
+
 .partner-logo img {
   max-width: 100%;
+  max-height: 90px;
+
+  width: auto;
   height: auto;
-  display: block;
+
+  object-fit: contain;
+
+  filter: none; /* pastikan berwarna */
+  opacity: 1;
 }
 @media (prefers-reduced-motion: reduce) {
   .partner-logo {
     transition: none;
+  }
+}
+
+/* Testimoni */
+/* CARD */
+.testimonial-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  background: #fff;
+  border-radius: 24px;
+  padding: 60px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* KONTEN */
+.testimonial-content {
+  flex: 1;
+}
+
+.testimonial-header h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #24324a;
+  margin-bottom: 0.3rem;
+}
+
+.testimonial-header span {
+  color: #0ea5a8;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.testimonial-rating {
+  color: #ffb400;
+  font-size: 1.3rem;
+}
+
+.testimonial-content p {
+  margin-top: 30px;
+  font-size: 1.15rem;
+  line-height: 2;
+  color: #5d6777;
+}
+
+/* FOTO */
+.testimonial-image img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.testimonial-image img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  border: 8px solid #fff;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* MOBILE */
+@media (max-width: 992px) {
+  .testimonial-card {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 35px;
+    gap: 30px;
+  }
+
+  .testimonial-image {
+    width: auto;
+    min-width: auto;
+  }
+
+  .testimonial-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .testimonial-header {
+    justify-content: center;
+  }
+}
+
+.testimonial-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.testimonial-header span {
+  color: #0aa3a3;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.testimonial-content p {
+  font-size: 1.2rem;
+  line-height: 2;
+  color: #5f6368;
+  margin: 0;
+}
+.testimonial-content {
+  position: relative;
+}
+
+.testimonial-content::after {
+  position: absolute;
+  right: 40px;
+  bottom: 20px;
+  font-size: 90px;
+  color: #ececec;
+  font-weight: bold;
+  line-height: 1;
+}
+@media (max-width: 991px) {
+  .testimonial-card {
+    flex-direction: column;
+  }
+
+  .testimonial-image {
+    flex: none;
+    width: 100%;
+    height: 320px;
+  }
+
+  .testimonial-content {
+    padding: 30px;
+  }
+
+  .testimonial-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.testimonial-card {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+
+  border: 1px solid #e7edf5;
+
+  box-shadow:
+    0 10px 35px rgba(15, 23, 42, 0.08),
+    0 2px 8px rgba(15, 23, 42, 0.05);
+
+  transition: 0.35s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 18px 45px rgba(15, 23, 42, 0.12),
+    0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 55px;
+  height: 55px;
+  background: #0f766e;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+  left: -28px;
+}
+
+.carousel-control-next {
+  right: -28px;
+}
+
+@media (max-width: 991px) {
+  .testimonial-card {
+    flex-direction: column;
+  }
+
+  .testimonial-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .testimonial-content {
+    padding: 30px;
+  }
+
+  .testimonial-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
   }
 }
 
